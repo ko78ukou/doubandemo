@@ -5,7 +5,11 @@ douban demo
     
    
    
-<a href="https://github.com/sanlisanlisanli/doubandemo/tree/master/app/release">APK下载</a>  
+<a href="https://github.com/sanlisanlisanli/doubandemo/tree/master/app/release">APK下载</a>   
+    
+    
+retrofit+rxjava  豆瓣api练习  
+   
   
    
 截图 
