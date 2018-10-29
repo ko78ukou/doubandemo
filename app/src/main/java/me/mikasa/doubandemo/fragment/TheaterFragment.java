@@ -56,12 +56,12 @@ public class TheaterFragment extends BaseFragment
         recyclerView=mRootView.findViewById(R.id.xrv);
         recyclerView.setLayoutManager(new GridLayoutManager(mBaseActivity,2));
         recyclerView.setAdapter(mAdapter);
-        recyclerView.setLimitNumberToCallLoadMore(1);
+        recyclerView.setLimitNumberToCallLoadMore(1);//xrv属性
     }
 
     @Override
     public void onItemClick(int pos) {
-        showToast("点击"+pos);
+        //showToast("点击"+pos);
         Intent intent=new Intent(mBaseActivity,WebviewActivity.class);
         intent.putExtra("title",list.get(pos-1).getTitle());//xrv有一个header
         intent.putExtra("url",list.get(pos-1).getAlt());
