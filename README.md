@@ -34,8 +34,8 @@ webview
 感谢开源  
 retrofit  
 rxjava  
-glide 
-xrecyclerview  
+glide    
+xrecyclerview   
   
   
  .
