@@ -13,8 +13,8 @@ import java.util.List;
  */
 
 public abstract class BaseRvAdapter<T> extends RecyclerView.Adapter {
-    protected List<T>mDataList=new ArrayList<>();
-    private OnRvItemClickListener mListener;
+    protected List<T>mDataList=new ArrayList<>();//dataList,protected可继承
+    private OnRvItemClickListener mListener;//clickListener点击监听事件
     //分页加载，追加数据
     public void appendData(List<T>dataList){
         if (null!=dataList&&!dataList.isEmpty()){
@@ -28,7 +28,7 @@ public abstract class BaseRvAdapter<T> extends RecyclerView.Adapter {
     public int getItemCount() {
         return mDataList.size();
     }
-    public void setOnRvItemClickListener(OnRvItemClickListener listener){
+    public void setOnRvItemClickListener(OnRvItemClickListener listener){//设置监听事件
         this.mListener=listener;
     }
     //abstract viewHolder
@@ -36,7 +36,7 @@ public abstract class BaseRvAdapter<T> extends RecyclerView.Adapter {
             implements View.OnClickListener{
         public BaseRvViewHolder(View itemView){
             super(itemView);
-            itemView.setOnClickListener(this);//itemView
+            itemView.setOnClickListener(this);//itemView点击事件
             //itemView.setOnLongClickListener(this);//itemView
         }
         protected abstract void bindView(T t);//bindView
