@@ -44,7 +44,7 @@ public class TheaterAdapter extends BaseRvAdapter<Theater.SubjectsBean> {
         }
 
         @Override
-        protected void bindView(Theater.SubjectsBean bean) {
+        protected void bindView(Theater.SubjectsBean bean) {//适配dataList与recyclerView
             Glide.with(mContext).load(bean.getImages().getSmall())
                     .error(R.drawable.ic_bili)
                     .placeholder(R.drawable.ic_bili)
