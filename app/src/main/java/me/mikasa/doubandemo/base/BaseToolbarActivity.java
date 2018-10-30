@@ -14,8 +14,8 @@ import me.mikasa.doubandemo.R;
  */
 
 public abstract class BaseToolbarActivity extends BaseActivity {
-    protected Toolbar mToolbar;
-    protected TextView mTitle;
+    protected Toolbar mToolbar;//toolbar可继承
+    protected TextView mTitle;//title可继承
 
     @Override
     public void setContentView(@LayoutRes int layoutResID) {//setContentView()
