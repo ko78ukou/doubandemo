@@ -15,8 +15,8 @@ import android.widget.Toast;
  */
 
 public abstract class BaseFragment extends Fragment {
-    protected BaseActivity mBaseActivity;//贴附的activity,Fragment中可能用到
-    protected View mRootView;
+    protected BaseActivity mBaseActivity;//贴附的activity(activity需继承baseActivity),Fragment中可能用到
+    protected View mRootView;//onCreateView()中inflate的view，即fragment_view
 
     @Override
     public void onAttach(Context context) {
@@ -36,7 +36,7 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract int setLayoutResId();
     protected abstract void initData(Bundle bundle);
-    protected abstract void initView();
+    protected abstract void initView();//View view=mRootView.findViewById()
     protected abstract void setListener();
     protected void showToast(String msg){
         Toast.makeText(mBaseActivity,msg,Toast.LENGTH_SHORT).show();//mBaseActivity
